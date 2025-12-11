@@ -25,7 +25,9 @@ document.getElementById("prezzo-biglietto-finale").innerHTML += ` € ${prezzoFi
 document.getElementById("sconto").innerHTML += ` ${sconto * 100} %`;
 
 
-// TIP:
-// per controllare che la vostra logica sui prezzi funzioni correttamente, provate a verificare quanto segue:
-// 100km, 10 anni => prezzo corretto:  €16.80
-// 100km, 70 anni => prezzo corretto: €12.60
+
+// MILESTONE 1:
+// Iniziamo implementando il programma senza alcuna estetica: 
+// usando esclusivamente due input e un bottone (non stilizzati),
+// realizziamo le specifiche scritte sopra. 
+// La risposta finale (o output) sarà anch’essa da scrivere in console. 
