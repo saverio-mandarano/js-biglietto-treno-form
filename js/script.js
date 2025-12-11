@@ -1,12 +1,10 @@
-// MILESTONE 2:
-// Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui 
-// l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo. 
-// Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina 
-// (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). 
-// Questo richiederà un minimo di ricerca.
- 
-
 const form = document.querySelector(`form`);
+
+//random-number calls
+const carriageNum = getRandomIntInclusive(1, 10);
+const seatNum = getRandomIntInclusive(1, 50);
+console.log(`carriageNum: ${carriageNum}`);
+console.log(`seatNum: ${seatNum}`);
 
 form.addEventListener(`submit`, function(e) {
     // prevengo comportamento di deafult del submit...
@@ -49,7 +47,17 @@ form.addEventListener(`submit`, function(e) {
 
     // Inserisco in HTML i valori calcolati
     document.getElementById("price").textContent = `€ ${price.toFixed(2)}`;
-
-
+    document.getElementById("carriage").textContent = `${carriageNum}`;
+    document.getElementById("seat").textContent = `${seatNum}`;
 
 });
+
+//Funzione (riciclata da js-pariedispari ) che genera casualmente numero intero nell'intervallo [min, max]:
+function getRandomIntInclusive(min, max) {
+    const minCeiled = Math.ceil(min); 
+    const maxFloored = Math.floor(max); 
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+}
+
+
+
