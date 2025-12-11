@@ -11,8 +11,11 @@ form.addEventListener(`submit`, function(e) {
     e.preventDefault();
 
     // estraggo dati di input dell'utente...
-    const km = Number(Number(document.getElementById(`userKm`).value).toFixed(2));
-    const age = Number(Number(document.getElementById(`userAge`).value).toFixed(2));
+    const inputKm = Number(document.getElementById(`userKm`).value.trim()); //km in input, massimo due decimali per scelta
+    const km = Number(inputKm.toFixed(2)); //arrotondo a centesimi
+   
+    const age = parseInt(document.getElementById(`userAge`).value.trim()); //age in input, numero intero
+
     console.log(`km: ${km}`);
     console.log(`age: ${age}`);
     console.log(`typeof km/age`, typeof km, typeof age);
