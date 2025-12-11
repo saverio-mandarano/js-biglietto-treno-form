@@ -21,6 +21,7 @@ form.addEventListener(`submit`, function(e) {
     // check di controllo input
     if (isNaN(km) || isNaN(age) || km <= 0 || age <= 0) {
         console.log(`Input not valid. Please try again...`);
+        alert(`Input not valid. Please try again...`);
         return;
     }
 
