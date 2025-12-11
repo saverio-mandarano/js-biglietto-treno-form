@@ -14,3 +14,7 @@ body {
   width: 80%;
   /* background-color: rgba(0, 0, 0, 0.7); */
 }
+
+.custom-width {
+  width: calc(100% / 3 - (60px / 3));
+}

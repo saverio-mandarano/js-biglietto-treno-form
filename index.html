@@ -31,7 +31,7 @@
     <!-- Implemento due input ed un bottone senza stile -->
 
     <div
-      class="wrapper d-flex flex-column justify-content-center align-items-center gap-5 p-5"
+      class="wrapper d-flex flex-column justify-content-center align-items-center justify-content-center gap-5 p-5"
     >
       <!-- card -->
       <div class="card s-card rounded-5 bg-dark bg-opacity-50 text-white">
@@ -43,7 +43,8 @@
             Enter your travel details to search for the best available tickets
             across multiple websites, including any applicable discounts.
           </p>
-          <form class="d-flex gap-2 justify-content-center">
+
+          <form class="d-flex gap-2 mb-2">
             <input
               type="text"
               id="userKm"
@@ -53,9 +54,17 @@
             <input
               type="text"
               id="userAge"
-              class="form-control-lg"
+              class="form-control-lg custom-width"
               placeholder="Age"
             />
+            <input
+              type="submit"
+              value="Push"
+              id="calculateBtn"
+              class="btn btn-lg btn-success rounded-pill"
+            />
+          </form>
+          <form class="mb-2">
             <!-- dropdown -->
             <div class="dropdown">
               <button
@@ -77,12 +86,6 @@
                 </li>
               </ul>
             </div>
-            <input
-              type="submit"
-              value="Push"
-              id="calculateBtn"
-              class="btn btn-lg btn-success rounded-pill"
-            />
           </form>
         </div>
       </div>
