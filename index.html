@@ -31,7 +31,7 @@
     <!-- Implemento due input ed un bottone senza stile -->
 
     <div
-      class="wrapper d-flex flex-column justify-content-center align-items-center gap-3 p-5"
+      class="wrapper d-flex flex-column justify-content-center align-items-center gap-5 p-5"
     >
       <!-- card -->
       <div class="card s-card rounded-5 bg-dark bg-opacity-50 text-white">
@@ -39,16 +39,31 @@
           FIND THE BEST TICKET FOR YOUR TRIP
         </h2>
         <div class="card-body">
-          <p class="card-text">
+          <p class="card-text fs-5">
             Enter your travel details to search for the best available tickets
             across multiple websites, including any applicable discounts.
           </p>
-          <form>
-            <label for="userKm">Km:</label>
-            <input type="text" id="userKm" />
-            <label for="userAge">Age:</label>
-            <input type="text" id="userAge" />
-            <input type="submit" value="Push" id="calculateBtn" />
+          <form class="d-flex gap-2">
+            <label for="userKm" class="text-success"></label>
+            <input
+              type="text"
+              id="userKm"
+              class="form-control-lg"
+              placeholder="Km"
+            />
+            <label for="userAge" class="text-success"></label>
+            <input
+              type="text"
+              id="userAge"
+              class="form-control-lg"
+              placeholder="Age"
+            />
+            <input
+              type="submit"
+              value="Push"
+              id="calculateBtn"
+              class="btn btn-lg btn-success rounded-pill"
+            />
           </form>
         </div>
       </div>
@@ -57,17 +72,26 @@
       <div class="card s-card rounded-5 bg-dark bg-opacity-50 text-white">
         <h2 class="card-title text-center fw-bold">BEST TICKET FOR YOU</h2>
         <div class="card-body">
-          <p class="card-text">
-            Here are the best available tickets found across multiple websites.
-            :
+          <p class="card-text fs-5">
+            Here are the best available tickets found across multiple websites:
           </p>
-          <form>
-            <label for="userKm">Km:</label>
-            <input type="text" id="userKm" />
-            <label for="userAge">Age:</label>
-            <input type="text" id="userAge" />
-            <input type="submit" value="Calculate" id="calculateBtn" />
-          </form>
+
+          <div class="row text-center">
+            <div class="col p-3 border-end">
+              <h5 class="text-success">Price</h5>
+              <span id="price" class="fw-bold">-</span>
+            </div>
+
+            <div class="col p-3 border-end">
+              <h5 class="text-success">Carriage</h5>
+              <p id="carriage" class="fw-bold">-</p>
+            </div>
+
+            <div class="col p-3">
+              <h5 class="text-success">Seat</h5>
+              <p id="seat" class="fw-bold">-</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
