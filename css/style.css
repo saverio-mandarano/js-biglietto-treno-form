@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+/* .wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+} */
+
+body {
+  background-color: hotpink;
+}
