@@ -11,10 +11,10 @@ form.addEventListener(`submit`, function(e) {
     e.preventDefault();
 
     // estraggo dati di input dell'utente...
-    const inputKm = Number(document.getElementById(`userKm`).value.trim()); //km in input, massimo due decimali per scelta
+    const inputKm = Number(document.getElementById(`userKm`).value.trim().replace(`,`, `.`)); //km in input, massimo due decimali e cambio virgole in punti sennò non funziona
     const km = Number(inputKm.toFixed(2)); //arrotondo a centesimi
    
-    const age = parseInt(document.getElementById(`userAge`).value.trim()); //age in input, numero intero
+    const age = parseInt(document.getElementById(`userAge`).value.trim().replace(`,`, `.`)); //age in input, numero intero
 
     console.log(`km: ${km}`);
     console.log(`age: ${age}`);
