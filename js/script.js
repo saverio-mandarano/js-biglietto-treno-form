@@ -43,8 +43,13 @@ form.addEventListener(`submit`, function(e) {
         discount = 0.40;
     } 
 
-    price = Number((price * (1 - discount)).toFixed(2));
+    price = Number((price * (1 - discount)));
     console.log(`typeof price`, typeof price);
     console.log(`Il prezzo del biglietto è di: € ${price}` );
+
+    // Inserisco in HTML i valori calcolati
+    document.getElementById("price").textContent = `€ ${price.toFixed(2)}`;
+
+
 
 });
