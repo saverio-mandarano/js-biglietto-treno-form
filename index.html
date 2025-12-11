@@ -43,21 +43,40 @@
             Enter your travel details to search for the best available tickets
             across multiple websites, including any applicable discounts.
           </p>
-          <form class="d-flex gap-2">
-            <label for="userKm" class="text-success"></label>
+          <form class="d-flex gap-2 justify-content-center">
             <input
               type="text"
               id="userKm"
               class="form-control-lg"
               placeholder="Km"
             />
-            <label for="userAge" class="text-success"></label>
             <input
               type="text"
               id="userAge"
               class="form-control-lg"
               placeholder="Age"
             />
+            <!-- dropdown -->
+            <div class="dropdown">
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Route Type
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Direct routes only </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Include Routes with Transfers</a
+                  >
+                </li>
+              </ul>
+            </div>
             <input
               type="submit"
               value="Push"
