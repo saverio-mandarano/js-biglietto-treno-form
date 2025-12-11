@@ -5,11 +5,11 @@
 }
 
 /* Layout */
-/* .wrapper {
-  max-width: 920px;
-  margin: 0 auto;
-} */
-
 body {
-  background-color: hotpink;
+  background-image: url("../img/moon-2048727_1920.jpg");
+  background-size: cover;
+}
+
+.s-card {
+  width: 80%;
 }
