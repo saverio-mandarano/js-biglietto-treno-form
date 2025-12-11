@@ -23,8 +23,9 @@ const form = document.querySelector(`form`);
 form.addEventListener(`submit`, function(e) {
     e.preventDefault();
 
-    const km = document.getElementById(`userKm`).value;
-    const age = document.getElementById(`userAge`).value;
+    const km = Number(Number(document.getElementById(`userKm`).value).toFixed(2));
+    const age = Number(Number(document.getElementById(`userAge`).value).toFixed(2));
     console.log(`km: ${km}`);
     console.log(`age: ${age}`);
+    console.log(typeof km);
 });
