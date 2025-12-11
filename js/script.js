@@ -19,10 +19,6 @@ else if (età > 65) {
 const prezzoFinale = (prezzoIniziale * (1 - sconto)).toFixed(2);
 // Output partite da semplice log, e poi se volete stampate in pagina come sapete fare.
 console.log(`Il prezzo del biglietto è di: € ${prezzoFinale}` );
-// alert(`Il prezzo del biglietto è di: € ${prezzoFinale}` );
-document.getElementById("prezzo-biglietto-iniziale").innerHTML = "Il prezzo del biglietto iniziale è di: € " + prezzoIniziale;
-document.getElementById("prezzo-biglietto-finale").innerHTML += ` € ${prezzoFinale}`
-document.getElementById("sconto").innerHTML += ` ${sconto * 100} %`;
 
 
 
@@ -31,3 +27,9 @@ document.getElementById("sconto").innerHTML += ` ${sconto * 100} %`;
 // usando esclusivamente due input e un bottone (non stilizzati),
 // realizziamo le specifiche scritte sopra. 
 // La risposta finale (o output) sarà anch’essa da scrivere in console. 
+
+const form = document.querySelector(`form`);
+
+form.addEventListener(`submit`, function(e) {
+    e.preventDefault();
+});
