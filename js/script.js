@@ -51,6 +51,9 @@ form.addEventListener(`submit`, function(e) {
     document.getElementById("carriage").textContent = `${carriageNum}`;
     document.getElementById("seat").textContent = `${seatNum}`;
 
+    document.getElementById("daNascondere").classList.remove("d-none");
+
+
 });
 
 //Funzione (riciclata da js-pariedispari ) che genera casualmente numero intero nell'intervallo [min, max]:
@@ -59,6 +62,12 @@ function getRandomIntInclusive(min, max) {
     const maxFloored = Math.floor(max); 
     return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 }
+
+//Funzione per nascondere seconda card con bottone annulla
+document.getElementById("resetBtn").addEventListener("click", function () {
+  document.getElementById("daNascondere").classList.add("d-none");
+});
+
 
 
 
